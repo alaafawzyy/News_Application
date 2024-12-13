@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.NewsApplicationXML" parent="Theme.Material3.DayNight.NoActionBar">
+         Customize your light theme here
+        <!-- تخصيص اللون الأساسي -->
+        <item name="colorPrimary">@color/black</item> <!-- اللون الأساسي الأسود -->
+        <item name="background">@color/black</item> <!-- الخلفية السوداء -->
+        <item name="android:textColorPrimary">@android:color/white</item> <!-- النصوص البيضاء -->
+
+        <!-- تخصيص شريط الحالة -->
+        <item name="android:statusBarColor">@android:color/white</item> <!-- جعل شريط الحالة أبيض -->
+        <item name="android:windowLightStatusBar">true</item> <!-- جعل الأيقونات باللون الأسود -->
+    </style>
+
+    <style name="Theme.NewsApplicationXML" parent="Base.Theme.NewsApplicationXML" />
+    <style name="RoundedSquare">
+        <item name="cornerSize">10%</item>
+    </style>
+</resources>
