@@ -1,4 +1,4 @@
-# News Android App
+![image](https://github.com/user-attachments/assets/d35e7718-a588-48ab-8d7e-88849f1a4156)# News Android App
 This NewsApp project is developed with MVVM architecture. It provides live top news. Allow you to browse by specific category such as by sprots, by science, by entertainment. You can also search with keywords.
 ## Technologies Used
 - **JetBack Compose**:
@@ -18,17 +18,17 @@ This NewsApp project is developed with MVVM architecture. It provides live top n
     <tr>
         <td style="padding-right: 100px;padding-bottom: 100px;"><img src="https://raw.githubusercontent.com/alaafawzyy/News_Application/refs/heads/master/app/asset/photo_2024-12-15_21-06-18.jpg" width="200" height="400"/></td>
 
-       <td style="padding-right: 100px;padding-bottom: 100px;"><img src="" width="200" height="400"/></td>
+       <td style="padding-right: 100px;padding-bottom: 100px;"><img src="https://raw.githubusercontent.com/alaafawzyy/News_Application/refs/heads/master/app/asset/photo_2024-12-15_21-06-05.jpg" width="200" height="400"/></td>
        
-       <td style="padding-right: 100px;padding-bottom: 100px;"><img src="" width="200" height="400"/></td>
+       <td style="padding-right: 100px;padding-bottom: 100px;"><img src="https://raw.githubusercontent.com/alaafawzyy/News_Application/refs/heads/master/app/asset/photo_2024-12-15_21-06-13.jpg" width="200" height="400"/></td>
     </tr>
 
      <tr>
-        <td style="padding-right: 100px;padding-bottom: 100px;"><img src="" width="200" height="400"/></td>
+          <td style="padding-right: 100px;padding-bottom: 100px;"><img src="https://github.com/alaafawzyy/News_Application/blob/master/app/asset/photo_2024-12-15_21-05-28.jpg" width="200" height="400"/></td>
+        <td style="padding-right: 100px;padding-bottom: 100px;"><img src="https://raw.githubusercontent.com/alaafawzyy/News_Application/refs/heads/master/app/asset/photo_2024-12-15_21-06-00.jpg" width="200" height="400"/></td>
 
-       <td style="padding-right: 100px;padding-bottom: 100px;"><img src="" width="200" height="400"/></td>
-       
-       <td style="padding-right: 100px;padding-bottom: 100px;"><img src="" width="200" height="400"/></td>
+  
+
     </tr>
 
 </table>
