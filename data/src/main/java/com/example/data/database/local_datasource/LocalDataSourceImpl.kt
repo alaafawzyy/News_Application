@@ -22,7 +22,7 @@ class LocalDataSourceImpl @Inject constructor(private val databaseManager: Datab
 
         val uniqueArticlesDBList = articlesDBList.distinctBy { it }
 
-        databaseManager.articlesDao().addArticles(uniqueArticlesDBList)
+        databaseManager.articlesDao().addArticles(list.filterNotNull())
     }
 
 

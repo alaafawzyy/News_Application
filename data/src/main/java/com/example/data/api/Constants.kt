@@ -3,7 +3,7 @@ package com.example.data.api
 import com.example.data.model.Category
 
 object Constants {
-    val apikey="5803d5116fc14cd88d136407e2c8113b"
+    val apikey="9349a1ad328b4ad0a54a788ed687442e"
 /*
     val categores= listOf(
         Category(

@@ -1,6 +1,9 @@
 package com.example.domain.model
 
 import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+import java.io.Serializable
+
 
 data class Source(
     val category: String?,
@@ -9,4 +12,4 @@ data class Source(
     val id: String?,
     val language: String?,
     val name: String?,
-    val url: String? )
+    val url: String? ): Serializable

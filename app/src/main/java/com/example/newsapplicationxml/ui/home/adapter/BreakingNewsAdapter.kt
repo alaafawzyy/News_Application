@@ -52,7 +52,7 @@ if(news !=null){
             binding.source.text = newsSource.toString()
 
             val newsDescription = news.title ?: ""
-            binding.description.text = newsDescription
+            binding.content.text = newsDescription
          val newsdate = news.publishedAt ?: ""
              binding.date.text = newsdate.toString()
             Glide.with(itemView)
