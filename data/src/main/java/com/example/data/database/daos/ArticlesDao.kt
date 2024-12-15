@@ -12,7 +12,7 @@ import com.example.domain.model.Article
 @Dao
 interface ArticlesDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun addArticles(list: List<Article?>)
+    suspend fun addArticles(list: List<ArticleDto>)
 
 
 

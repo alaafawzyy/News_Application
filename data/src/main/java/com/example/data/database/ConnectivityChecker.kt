@@ -8,13 +8,15 @@ import android.os.Build
 
 object ConnectivityChecker {
 
-    lateinit var context: Application
+    // سيتم تهيئة الـ context هنا في الـ Application class
+    lateinit var context: Context
 
+    // التأكد من توافر الشبكة
     fun isNetworkAvailable(): Boolean {
-        if (context == null) return false
+        // هنا التحقق من عدم تهيئة context ليس مطلوبًا بعد الآن لأننا نحتاجه من الـ Application
         val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-             val capabilities = connectivityManager.getNetworkCapabilities(connectivityManager.activeNetwork)
+            val capabilities = connectivityManager.getNetworkCapabilities(connectivityManager.activeNetwork)
             if (capabilities != null) {
                 when {
                     capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> {

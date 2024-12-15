@@ -1,5 +1,6 @@
 package com.example.data.dataSource.source
 
+import android.util.Log
 import com.example.data.api.WebServices
 import com.example.data.contract.newsSource.NewsSourceOnlineDataSource
 import com.example.data.executeApi
@@ -11,9 +12,9 @@ class SourceOnlineDataSourceImpl @Inject constructor(private val webServices: We
 
     override suspend fun getNewsSource(): List<Source>? {
         val responce= executeApi { webServices.getNewsSource() }
-         return responce?.filterNotNull()?.map {
-            it.toSource()
-        }
+
+
+        return responce?.sources?.mapNotNull { it.toSource() }
     }
 }
 

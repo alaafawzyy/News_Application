@@ -10,6 +10,7 @@ import javax.inject.Inject
 class BreakingNewsUseCase @Inject constructor(private val breakingNews: BreakingNewsRepo) {
 
     suspend fun invoke(): Flow<Resource<List<BreakingNews>?>> {
+
         return breakingNews.getBreakingNews()
     }
 }

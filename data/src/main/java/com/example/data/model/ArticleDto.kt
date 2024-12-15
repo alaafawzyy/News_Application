@@ -25,7 +25,7 @@ data class ArticleDto(
             content = content,
             description = description,
             publishedAt = publishedAt,
-            source = source?.toSource(),  // تحويل SourceDto إلى Source
+            source = source?.toSource(),
             title = title,
             url = url,
             urlToImage = urlToImage

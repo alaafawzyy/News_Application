@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Breaking News"
-        android:textSize="22dp"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:paddingTop="10dp"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toTopOf="parent"
         />
     <TextView
-        android:id="@+id/tv2"
+        android:id="@+id/viewall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="View all"
@@ -90,8 +90,66 @@
         android:layout_marginTop="20dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/lr_view"
 
         />
+    <LinearLayout
+        android:id="@+id/lr_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/rv_breakingNews"
+        app:layout_constraintBottom_toTopOf="@+id/tv_recomanded">
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="7dp"
+            android:layout_marginEnd="3dp"
+            android:backgroundTint="@color/gray"
+            android:background="@drawable/bg_view"/>
+        <View
+            android:layout_width="10dp"
+            android:layout_height="7dp"
+            android:layout_marginEnd="3dp"
+            android:backgroundTint="@color/gray"
+            android:background="@drawable/bg_view"/>
+        <View
+            android:layout_width="20dp"
+            android:layout_height="7dp"
+            android:layout_marginEnd="3dp"
+            android:backgroundTint="@color/baby_blue"
+            android:background="@drawable/bg_view"/>
+        <View
+            android:layout_width="10dp"
+            android:layout_height="7dp"
+            android:layout_marginEnd="3dp"
+            android:backgroundTint="@color/gray"
+            android:background="@drawable/bg_view"/>
+        <View
+            android:layout_width="10dp"
+            android:layout_height="7dp"
+            android:layout_marginEnd="3dp"
+            android:backgroundTint="@color/gray"
+            android:background="@drawable/bg_view"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_recomanded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Recommendation"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/lr_view"
+        app:layout_constraintBottom_toTopOf="@id/tabLayout"/>
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
@@ -99,10 +157,11 @@
         app:tabTextColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_breakingNews"
+        app:layout_constraintTop_toBottomOf="@+id/tv_recomanded"
         app:layout_constraintBottom_toTopOf="@id/news_recycle"
         app:tabMode="scrollable"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         app:tabGravity="start"
         />
     <androidx.recyclerview.widget.RecyclerView

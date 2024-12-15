@@ -19,18 +19,18 @@ class NewsRepositoryImpl @Inject constructor(
     private val localDataSource: LocalDataSource
 ): NewsRepository {
     override suspend fun getNews(sourceId: String): Flow<Resource<List<Article>?>> {
-        if (ConnectivityChecker.isNetworkAvailable()) {
+       if (ConnectivityChecker.isNetworkAvailable()) {
             val article = newsOnlineDataSource.getNews(sourceId = sourceId)
-            if (article != null) {
-                val nonNullArticles = article.map { toArticleDto(it) }
-                localDataSource.saveArticles(nonNullArticles)
+          if (article != null) {
+              val nonNullArticles = article.map { toArticleDto(it) }
+               localDataSource.saveArticles(nonNullArticles)
 
-            }
+        }
 
             return toFlow { article }
 
 
-        } else {
+      } else {
             val articlesFromDb = localDataSource.loadArticles(sourceId)
             return toFlow { articlesFromDb.filterNotNull().map { it!!.toArticle() } }
         }

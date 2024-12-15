@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.example.data.database.daos.ArticlesDao
 import com.example.data.database.daos.SourcesDao
 import com.example.data.model.ArticleDto
@@ -15,7 +16,8 @@ import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 
-@Database(entities = [SourceDto::class, ArticleDto::class], version = 7, exportSchema = false)
+@Database(entities = [SourceDto::class, ArticleDto::class], version = 5, exportSchema = false)
+@TypeConverters(Convertor::class)
 abstract class DatabaseManager : RoomDatabase() {
     abstract fun sourcesDao(): SourcesDao
     abstract fun articlesDao(): ArticlesDao

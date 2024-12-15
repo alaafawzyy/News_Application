@@ -5,6 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.domain.model.Source
 
+
 @Entity(tableName = "sources")
 data class SourceDto(
     @PrimaryKey
@@ -17,12 +18,10 @@ data class SourceDto(
     val language: String?,
     val name: String?,
     val url: String?
-){
+) {
     fun toSource(): Source {
-         return Source(
-           category, country, description, id, language, name, url
-
-         )
+        return Source(
+            category, country, description, id, language, name, url
+        )
     }
-
 }
